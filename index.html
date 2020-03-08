@@ -18,40 +18,62 @@
     .error {
       background: red;
     }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Top 100 Hip-Hop Albums of All Time</h1>
-    <div class="one-third"></div>
-    <div class="one-third"></div>
-    <form id="album-form">
-      <div>
-        <label for="id">ID</label>
-        <input type="text" class="u-full-width" id="id">
+    <div class="row">
+      <div class="one-half column">
+        <form id="album-form">
+          <div>
+            <label for="id">ID</label>
+            <input type="text" class="u-full-width" id="id">
+          </div>
+          <div>
+            <label for="title">Title</label>
+            <input type="text" class="u-full-width" id="title">
+          </div>
+          <div>
+            <label for="artist">Artist</label>
+            <input type="text" class="u-full-width" id="artist">
+          </div>
+          <div>
+            <label for="releaseDate">Release Date</label>
+            <input type="text" class="u-full-width" id="releaseDate">
+          </div>
+          <!-- <div>
+            <label for="id">ID</label>
+            <input type="text" class="u-full-width" id="id">
+          </div> -->
+          <div>
+            <input type="submit" value="Submit" class="u-full-width">
+          </div>
+        </form>
       </div>
-      <div>
-        <label for="title">Title</label>
-        <input type="text" class="u-full-width" id="title">
+      <div class="one-half column">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Release Date</th>
+              <th>Id</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="album-list"></tbody>
+        </table>
       </div>
-      <div>
-        <label for="artist">Artist</label>
-        <input type="text" class="u-full-width" id="artist">
-      </div>
-      <div>
-        <label for="releaseDate">Release Date</label>
-        <input type="text" class="u-full-width" id="releaseDate">
-      </div>
-      <!-- <div>
-        <label for="id">ID</label>
-        <input type="text" class="u-full-width" id="id">
-      </div> -->
-      <div>
-        <input type="submit" value="Submit" class="u-full-width">
-      </div>
-    </form>
+    </div>
+    
 
-    <table class="u-full-width">
+    <!-- <table class="u-full-width">
       <thead>
         <tr>
           <th>Title</th>
@@ -62,7 +84,7 @@
         </tr>
       </thead>
       <tbody id="album-list"></tbody>
-    </table>
+    </table> -->
 
   </div>
 
